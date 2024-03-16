@@ -33,7 +33,7 @@ public class WebSite : ISubscriptionFactory
                 subscription = new PremiumSubscription(_monthlyFee);
                 break;
             default:
-                
+
                 break;
         }
 

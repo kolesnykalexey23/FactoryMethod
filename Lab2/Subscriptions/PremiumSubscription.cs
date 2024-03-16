@@ -1,6 +1,6 @@
 namespace Lab2.Subscriptions;
 
-public class PremiumSubscription: ISubscription
+public class PremiumSubscription : ISubscription
 {
     private string _name;
     private float _monthlyFee;
@@ -16,7 +16,7 @@ public class PremiumSubscription: ISubscription
     }
 
     public string Name => _name;
-    public string [] Channels => _channels;
+    public string[] Channels => _channels;
     public float MinSubscriptionPeriod => _minSubscriptionPeriod;
     public float GetPrice() => _monthlyFee;
 }

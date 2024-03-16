@@ -1,7 +1,8 @@
 namespace Lab2.Factories;
+
 using Lab2.Subscriptions;
 
-public class MobileApp: ISubscriptionFactory
+public class MobileApp : ISubscriptionFactory
 {
     private float _monthlyFee;
     private string _description;
@@ -13,7 +14,7 @@ public class MobileApp: ISubscriptionFactory
         _monthlyFee = monthlyFee;
         _description = description;
         _subsciptionType = subscriptionType;
-       // _studentCode = studentCode;
+        // _studentCode = studentCode;
     }
 
     public ISubscription GetSubscription()
@@ -32,7 +33,7 @@ public class MobileApp: ISubscriptionFactory
                 subscription = new PremiumSubscription(_monthlyFee);
                 break;
             default:
-                
+
                 break;
         }
 

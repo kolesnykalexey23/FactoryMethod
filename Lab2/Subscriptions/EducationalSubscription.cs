@@ -6,7 +6,7 @@ public class EducationalSubscription : ISubscription
     private float _monthlyFee;
     private float _minSubscriptionPeriod;
     private string[] _channels;
-    
+
     private string _studentCode;
     private string _code = "student";
     private int _discount = 20;
@@ -21,7 +21,7 @@ public class EducationalSubscription : ISubscription
     }
 
     public string Name => _name;
-    public string [] Channels => _channels;
+    public string[] Channels => _channels;
     public float MinSubscriptionPeriod => _minSubscriptionPeriod;
     public float GetPrice() => Discount();
 

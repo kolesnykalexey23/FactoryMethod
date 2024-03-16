@@ -19,7 +19,7 @@ public class DomesticSubscription : ISubscription
     }
 
     public string Name => _name;
-    public string [] Channels => _channels;
+    public string[] Channels => _channels;
     public float MinSubscriptionPeriod => _minSubscriptionPeriod;
     public float GetPrice() => _monthlyFee;
 }
