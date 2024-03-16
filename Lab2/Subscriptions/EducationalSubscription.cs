@@ -2,21 +2,17 @@ namespace Lab2.Subscriptions;
 
 public class EducationalSubscription : ISubscription
 {
-    private string _name;
-    private float _monthlyFee;
-    private float _minSubscriptionPeriod;
-    private string[] _channels;
+    private string _name= "Educational Subscription";
+    private float _monthlyFee = 200;
+    private float _minSubscriptionPeriod = 365;
+    private string[] _channels= ["Educational channel 1", "Educational channel 2"];
 
     private string _studentCode;
     private string _code = "student";
     private int _discount = 20;
 
-    public EducationalSubscription(float fee, string studentCode = null)
+    public EducationalSubscription(string studentCode = null)
     {
-        _name = "Educational Subscription";
-        _channels = ["Educational channel 1", "Educational channel 2"];
-        _minSubscriptionPeriod = 365;
-        _monthlyFee = fee;
         _studentCode = studentCode;
     }
 

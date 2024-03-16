@@ -5,17 +5,14 @@ namespace Lab2.Subscriptions;
 
 public class DomesticSubscription : ISubscription
 {
-    private string _name;
-    private float _monthlyFee;
-    private float _minSubscriptionPeriod;
-    private string[] _channels;
+    private string _name= "Domestic Subscription";
+    private float _monthlyFee = 100;
+    private float _minSubscriptionPeriod = 20;
+    private string[] _channels= ["domestic channel 1", "domestic channel 2"];
 
-    public DomesticSubscription(float fee)
+    public DomesticSubscription()
     {
-        _name = "Domestic Subscription";
-        _channels = ["domestic channel 1", "domestic channel 2"];
-        _minSubscriptionPeriod = 20;
-        _monthlyFee = fee;
+        
     }
 
     public string Name => _name;

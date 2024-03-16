@@ -4,18 +4,19 @@ using Lab2.Subscriptions;
 
 public class MobileApp : ISubscriptionFactory
 {
-    private float _monthlyFee;
+    //private float _monthlyFee;
     private string _description;
     private string _subsciptionType;
     //private string _studentCode;
 
-    public MobileApp(float monthlyFee, string description, string subscriptionType)
+    public MobileApp(string description, string subscriptionType)
     {
-        _monthlyFee = monthlyFee;
         _description = description;
         _subsciptionType = subscriptionType;
         // _studentCode = studentCode;
     }
+    public string Description => _description;
+
 
     public ISubscription GetSubscription()
     {
@@ -24,13 +25,13 @@ public class MobileApp : ISubscriptionFactory
         switch (_subsciptionType)
         {
             case "d":
-                subscription = new DomesticSubscription(_monthlyFee);
+                subscription = new DomesticSubscription();
                 break;
             case "e":
-                subscription = new EducationalSubscription(_monthlyFee);
+                subscription = new EducationalSubscription();
                 break;
             case "p":
-                subscription = new PremiumSubscription(_monthlyFee);
+                subscription = new PremiumSubscription();
                 break;
             default:
 

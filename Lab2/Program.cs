@@ -21,6 +21,7 @@ class Program
 
         ISubscriptionFactory factory = GetFactory(platform, subscription);
         ISubscription abonement = factory.GetSubscription();
+        Console.WriteLine($"Description: {factory.Description}");
         Console.WriteLine($"Name: {abonement.Name} \nChanels: {string.Join(", ", abonement.Channels)}\nPeriod: {abonement.MinSubscriptionPeriod}\nPrice: {abonement.GetPrice()}");
         Console.ReadLine();
     }
@@ -28,9 +29,9 @@ class Program
     private static ISubscriptionFactory GetFactory(string platform, string subscription) =>
         platform.ToLower() switch
         {
-            "w" => new WebSite(100, "login via the website", subscription,"student"),
-            "m" => new MobileApp(200, "login via mobile app", subscription),
-            "man" => new MobileApp(300, "login via operator", subscription),
+            "w" => new WebSite("login via the website", subscription,"student"),
+            "m" => new MobileApp( "login via mobile app", subscription),
+            "man" => new MobileApp( "login via operator", subscription),
             _ => null
         };
 
